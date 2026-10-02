@@ -6,4 +6,7 @@
 [![Total Downloads](https://poser.pugx.org/diablomedia/zendframework1-currency/downloads)](https://packagist.org/packages/diablomedia/zendframework1-currency)
 [![License](https://poser.pugx.org/diablomedia/zendframework1-currency/license)](https://packagist.org/packages/diablomedia/zendframework1-currency)
 
+> [!WARNING]  
+> We've archived this repo as we're no longer using or maintaining Zend Framework 1
+
 This is just the Zend_Currency component extracted from our fork of the Zend Framework 1 repo (https://github.com/diablomedia/zf1).
