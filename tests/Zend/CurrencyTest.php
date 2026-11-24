@@ -19,7 +19,8 @@
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
  * @version    $Id$
  */
-
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Group;
 
 /**
  * @category   Zend
@@ -27,8 +28,8 @@
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Currency
  */
+#[Group('Zend_Currency')]
 class Zend_CurrencyTest extends PHPUnit\Framework\TestCase
 {
     protected $_cache;
@@ -816,9 +817,7 @@ class Zend_CurrencyTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('€ 2.000,00', $currency->toCurrency(null, array('value' => 2000)));
     }
 
-    /**
-     * @group ZF-10751
-     */
+    #[Group('ZF-10751')]
     public function testSetService()
     {
         $currency = new Zend_Currency();
@@ -826,10 +825,8 @@ class Zend_CurrencyTest extends PHPUnit\Framework\TestCase
         $this->assertTrue($currency->getService() instanceof Zend_Currency_Service);
     }
 
-    /**
-     * @group ZF-11798
-     * @dataProvider providerConstructorAllowsOverridingCurrencyDisplayFormat
-     */
+    #[Group('ZF-11798')]
+    #[DataProvider('providerConstructorAllowsOverridingCurrencyDisplayFormat')]
     public function testConstructorAllowsOverridingCurrencyDisplayFormat($display, $expected)
     {
         $currency = new Zend_Currency(array('value' => 100, 'display' => $display), 'en_US');
@@ -850,9 +847,7 @@ class Zend_CurrencyTest extends PHPUnit\Framework\TestCase
         );
     }
 
-    /**
-     * @group GH-516
-     */
+    #[Group('GH-516')]
     public function testToCurrencyWithLocaleWhichHasParentLocale()
     {
         $currency = new Zend_Currency(null, 'es_AR');
