@@ -118,8 +118,10 @@ class Zend_Currency
         }
 
         // Get the format
-        if ((is_array($calloptions) && !isset($calloptions['display']))
-                || (!is_array($calloptions) && $this->_options['display'] == self::NO_SYMBOL)) {
+        $useDefaultDisplay = is_array($calloptions)
+            ? !isset($calloptions['display'])
+            : $this->_options['display'] == self::NO_SYMBOL;
+        if ($useDefaultDisplay) {
             if (!empty($this->_options['symbol'])) {
                 $this->_options['display'] = self::USE_SYMBOL;
             } elseif (!empty($this->_options['currency'])) {
