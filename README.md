@@ -1,7 +1,6 @@
 # Zend Framework 1 - Currency
 
 [![Build](https://github.com/gizmocraftcom/zf1-currency/workflows/Build/badge.svg?event=push)](https://github.com/gizmocraftcom/zf1-currency/actions?query=workflow%3ABuild+event%3Apush)
-[![codecov](https://codecov.io/gh/gizmocraftcom/zf1-currency/branch/master/graph/badge.svg)](https://codecov.io/gh/gizmocraftcom/zf1-currency)
 [![Latest Stable Version](https://poser.pugx.org/gizmocraft/zendframework1-currency/v/stable)](https://packagist.org/packages/gizmocraft/zendframework1-currency)
 [![Total Downloads](https://poser.pugx.org/gizmocraft/zendframework1-currency/downloads)](https://packagist.org/packages/gizmocraft/zendframework1-currency)
 [![License](https://poser.pugx.org/gizmocraft/zendframework1-currency/license)](https://packagist.org/packages/gizmocraft/zendframework1-currency)
